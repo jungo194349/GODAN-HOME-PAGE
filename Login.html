@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html class="html">
+<head>
+	<meta charset="utf-8">
+	<title>고단 홈페이지 로그인</title>
+	<style>
+		.html {
+			background-color: #fffacd;
+		}
+		.body {
+			background-color: rgb(210, 212, 86);
+		}
+	</style>
+<body class="body">
+	<h1>GODAN 홈페이지 로그인</h1>
+	<p>사용자 이름:</p><input type="text" id="name">
+	<input type="button" value="로그인" onclick="login();">
+<script>
+	function login() {
+		var name = document.getElementById("name").value;
+		if(name == "") {
+			alert("사용자 이름을 입력해주세요.");
+		}
+		else {
+			alert("안녕하세요. "+name+"님");
+			localStorage.loginname = document.getElementById("name").value;
+			location.href = "GODAN.html";
+		}
+	}	
+	</script>
+</head>
+
+</body>
+</html>
